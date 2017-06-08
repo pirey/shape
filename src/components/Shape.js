@@ -13,27 +13,13 @@ class Shape extends Component {
       color,
     };
 
-    this.changeSquare = this.changeSquare.bind(this);
-    this.changeCircle = this.changeCircle.bind(this);
-    this.changeTriangle = this.changeTriangle.bind(this);
     this.changeColor = this.changeColor.bind(this);
+    this.changeShape = this.changeShape.bind(this);
   }
 
-  changeCircle(e) {
+  changeShape(shape) {
     this.setState((prevState, props) => ({
-      shape: 'circle'
-    }));
-  }
-
-  changeTriangle(e) {
-    this.setState((prevState, props) => ({
-      shape: 'triangle'
-    }));
-  }
-
-  changeSquare(e) {
-    this.setState((prevState, props) => ({
-      shape: 'square'
+      shape
     }));
   }
 
@@ -60,9 +46,7 @@ class Shape extends Component {
         <Control
           activeShape={shape}
           color={color}
-          changeCircle={this.changeCircle}
-          changeSquare={this.changeSquare}
-          changeTriangle={this.changeTriangle}
+          changeShape={this.changeShape}
           changeColor={this.changeColor}
         />
       </div>

@@ -13,6 +13,9 @@ const createStyles = ({ color, w, h }) => {
   const triangleWidth = (w + h) / 2;
   const triangleSide = triangleWidth / 2;
 
+  const trapezoidWidth = (w + h) / 2;
+  const trapezoidSide = trapezoidWidth / 2;
+
   const shapeStyle = {
     square: {
       ...commonStyle,
@@ -32,6 +35,14 @@ const createStyles = ({ color, w, h }) => {
       borderLeft: `${triangleSide}px solid transparent`,
       borderRight: `${triangleSide}px solid transparent`,
       borderBottom: `${triangleWidth}px solid ${color}`,
+      backgroundColor: 'transparent',
+    },
+    trapezoid: {
+      ...commonStyle,
+      borderBottom: `${trapezoidWidth}px solid ${color}`,
+      borderLeft: `${trapezoidSide}px solid transparent`,
+      borderRight: `${trapezoidSide}px solid transparent`,
+      height: 0,
       backgroundColor: 'transparent',
     }
   };
