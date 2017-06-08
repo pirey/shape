@@ -1,30 +1,32 @@
 export default ({ w, h, color }) => {
-  const triangleW = (parseFloat(w) / 2) + 'px';
-  return {
+  const commonStyle = {
+    width: w,
+    height: h,
+    margin: 20,
+    backgroundColor: color,
+    transition: 'border-radius .3s cubic-bezier(0, 0.61, 0, 1.09)',
+  };
+
+  const triangleWidth = w / 2;
+
+  const shapeStyle = {
     square: {
-      width: w,
-      height: h,
-      backgroundColor: color,
-      margin: '20px',
-      transition: 'border-radius .3s cubic-bezier(0, 0.61, 0, 1.09)',
+      ...commonStyle,
     },
     circle: {
-      width: w,
-      height: h,
+      ...commonStyle,
       borderRadius: '50%',
-      backgroundColor: color,
-      margin: '20px',
-      transition: 'border-radius .3s cubic-bezier(0, 0.61, 0, 1.09)',
     },
     triangle: {
-      width: '0',
-      height: '0',
+      ...commonStyle,
+      width: 0,
+      height: 0,
+      borderLeft: `${triangleWidth}px solid transparent`,
+      borderRight: `${triangleWidth}px solid transparent`,
+      borderBottom: `${w}px solid ${color}`,
       backgroundColor: 'transparent',
-      borderLeft: `${triangleW} solid transparent`,
-      borderRight: `${triangleW} solid transparent`,
-      borderBottom: `${w} solid ${color}`,
-      margin: '20px',
-      transition: 'border-radius .3s cubic-bezier(0, 0.61, 0, 1.09)',
     }
   };
+
+  return shapeStyle;
 };

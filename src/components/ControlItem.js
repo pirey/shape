@@ -8,7 +8,7 @@ export default ({ shape, color, onClick }) => {
 
   return (
     <a style={style} onClick={onClick}>
-      <Shape shape={shape} h="25px" w="25px" color={color} />
+      <Shape shape={shape} h={25} w={25} color={color} />
     </a>
   );
 };

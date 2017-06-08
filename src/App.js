@@ -39,7 +39,7 @@ class App extends Component {
     return (
       <div>
         <Container>
-          <Shape w="400px" h="400px" shape={this.state.shape} color="gold" />
+          <Shape w={400} h={400} shape={this.state.shape} color="gold" />
 
           <Control
             changeCircle={this.changeCircle}

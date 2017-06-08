@@ -2,7 +2,7 @@ import React from 'react';
 
 export default ({ children }) => {
   const containerStyle = {
-    width: '500px',
+    width: 500,
     margin: 'auto',
     display: 'flex',
     alignItems: 'center',
