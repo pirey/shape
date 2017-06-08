@@ -6,7 +6,7 @@ class Shape extends Component {
   constructor(props) {
     super(props);
 
-    const { color = '#aaa', shape = 'square' } = props;
+    const { color = 'gold', shape = 'square' } = props;
 
     this.state = {
       shape,
