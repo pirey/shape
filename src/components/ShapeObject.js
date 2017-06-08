@@ -3,7 +3,7 @@ import React from 'react';
 const createStyles = ({ color, w, h }) => {
   const commonStyle = {
     margin: 20,
-    transition: 'border-radius .3s cubic-bezier(0, 0.61, 0, 1.09)',
+    transition: 'all 1s cubic-bezier(0, 0.61, 0, 1.09)',
     fontFamily: 'monospace',
     width: w,
     height: h,
