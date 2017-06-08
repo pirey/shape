@@ -42,7 +42,7 @@ class Shape extends Component {
 
     return (
       <div style={containerStyle}>
-        <ShapeObject w={400} h={400} shape={this.state.shape} color="gold" />
+        <ShapeObject w={200} h={200} shape={this.state.shape} color="gold" />
         <Control
           changeCircle={this.changeCircle}
           changeSquare={this.changeSquare}
