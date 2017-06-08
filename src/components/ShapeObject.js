@@ -4,7 +4,7 @@ import Circle from './shapes/Circle';
 import Triangle from './shapes/Triangle';
 import Trapezoid from './shapes/Trapezoid';
 
-const ShapeObject = ({ shape = 'square', color = 'gold', w = 200, h = 200 }) => {
+const ShapeObject = ({ shape, color, w, h }) => {
 
   const shapes = {
     square: Square,
