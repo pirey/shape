@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({ onChange }) => {
+export default ({ color, onChange }) => {
   const style = {
     width: '100%',
     textAlign: 'center',
@@ -14,9 +14,15 @@ export default ({ onChange }) => {
     height: 0
   };
 
+  const labelStyle = {
+    cursor: 'pointer',
+    textShadow: `0 0 15px ${color}`,
+    fontSize: 'large',
+  };
+
   return (
     <div style={style}>
-      <label>choose color<input onChange={onChange} style={inputStyle} type="color" /></label>
+      <label style={labelStyle}>choose color<input onChange={onChange} style={inputStyle} type="color" /></label>
     </div>
   );
 };

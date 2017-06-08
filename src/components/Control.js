@@ -15,7 +15,7 @@ export default ({ activeShape, color, changeColor, changeSquare, changeCircle, c
         <ControlShape onClick={changeTriangle} shape="triangle" color={activeShape === 'triangle' ? color : grey} />
       </Flex>
       <Flex>
-        <ControlColor onChange={changeColor} />
+        <ControlColor color={color} onChange={changeColor} />
       </Flex>
     </div>
   );
