@@ -10,23 +10,28 @@ const createStyles = ({ color, w, h }) => {
     backgroundColor: color,
   };
 
-  const triangleWidth = w / 2;
+  const triangleWidth = (w + h) / 2;
+  const triangleSide = triangleWidth / 2;
 
   const shapeStyle = {
     square: {
       ...commonStyle,
+      width: (w + h) / 2,
+      height: (w + h) / 2,
     },
     circle: {
       ...commonStyle,
+      width: (w + h) / 2,
+      height: (w + h) / 2,
       borderRadius: '50%',
     },
     triangle: {
       ...commonStyle,
       width: 0,
       height: 0,
-      borderLeft: `${triangleWidth}px solid transparent`,
-      borderRight: `${triangleWidth}px solid transparent`,
-      borderBottom: `${w}px solid ${color}`,
+      borderLeft: `${triangleSide}px solid transparent`,
+      borderRight: `${triangleSide}px solid transparent`,
+      borderBottom: `${triangleWidth}px solid ${color}`,
       backgroundColor: 'transparent',
     }
   };

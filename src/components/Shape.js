@@ -34,6 +34,9 @@ class Shape extends Component {
   }
 
   render() {
+
+    const { w = 200, h = 200 } = this.props;
+
     const containerStyle = {
       display: 'flex',
       alignItems: 'center',
@@ -43,7 +46,7 @@ class Shape extends Component {
 
     return (
       <div style={containerStyle}>
-        <ShapeObject w={200} h={200} shape={this.state.shape} color="gold" />
+        <ShapeObject w={w} h={h} shape={this.state.shape} color="gold" />
         <Control
           changeCircle={this.changeCircle}
           changeSquare={this.changeSquare}
