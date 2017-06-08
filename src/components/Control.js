@@ -1,18 +1,22 @@
 import React from 'react';
-import ControlItem from './ControlItem';
+import ControlShape from './ControlShape';
+import ControlColor from './ControlColor';
+import Flex from './Flex';
 
-export default ({ changeSquare, changeCircle, changeTriangle }) => {
-  const style = {
-    display: 'flex',
-    alignItems: 'center',
-    justiryContent: 'center',
-  };
+export default ({ activeShape, color, changeColor, changeSquare, changeCircle, changeTriangle }) => {
+
+  const grey = '#eee';
 
   return (
-    <div style={style}>
-      <ControlItem onClick={changeSquare} shape="square" color="teal" />
-      <ControlItem onClick={changeCircle} shape="circle" color="gold" />
-      <ControlItem onClick={changeTriangle} shape="triangle" color="pink" />
+    <div>
+      <Flex>
+        <ControlShape onClick={changeSquare} shape="square" color={activeShape === 'square' ? color : grey} />
+        <ControlShape onClick={changeCircle} shape="circle" color={activeShape === 'circle' ? color : grey} />
+        <ControlShape onClick={changeTriangle} shape="triangle" color={activeShape === 'triangle' ? color : grey} />
+      </Flex>
+      <Flex>
+        <ControlColor onChange={changeColor} />
+      </Flex>
     </div>
   );
 };

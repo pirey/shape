@@ -6,13 +6,17 @@ class Shape extends Component {
   constructor(props) {
     super(props);
 
+    const { color = 'gold', shape = 'square' } = props;
+
     this.state = {
-      shape: 'square'
+      shape,
+      color,
     };
 
     this.changeSquare = this.changeSquare.bind(this);
     this.changeCircle = this.changeCircle.bind(this);
     this.changeTriangle = this.changeTriangle.bind(this);
+    this.changeColor = this.changeColor.bind(this);
   }
 
   changeCircle(e) {
@@ -33,9 +37,15 @@ class Shape extends Component {
     }));
   }
 
+  changeColor(e) {
+    this.setState({ color: e.target.value });
+  }
+
   render() {
 
     const { w = 200, h = 200 } = this.props;
+
+    const { color, shape } = this.state;
 
     const containerStyle = {
       display: 'flex',
@@ -46,11 +56,14 @@ class Shape extends Component {
 
     return (
       <div style={containerStyle}>
-        <ShapeObject w={w} h={h} shape={this.state.shape} color="gold" />
+        <ShapeObject color={color} w={w} h={h} shape={shape} />
         <Control
+          activeShape={shape}
+          color={color}
           changeCircle={this.changeCircle}
           changeSquare={this.changeSquare}
           changeTriangle={this.changeTriangle}
+          changeColor={this.changeColor}
         />
       </div>
     );

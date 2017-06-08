@@ -6,8 +6,8 @@ export default () => (
   <div>
     <Flex>
       <Shape />
-      <Shape />
-      <Shape />
+      <Shape shape="circle" />
+      <Shape shape="triangle" />
     </Flex>
   </div>
 );
