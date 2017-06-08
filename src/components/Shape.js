@@ -1,13 +1,56 @@
-import React from 'react';
-import createStyles from './shapeStyles';
+import React, { Component } from 'react';
+import ShapeObject from './ShapeObject';
+import Control from './Control';
 
-export default ({ shape = 'square', color = 'gold', w = 200, h = 200 }) => {
+class Shape extends Component {
+  constructor(props) {
+    super(props);
 
-  const shapeStyles = createStyles({ color, w, h });
+    this.state = {
+      shape: 'square'
+    };
 
-  return (
-    <div>
-      <div style={shapeStyles[shape]}></div>
-    </div>
-  );
+    this.changeSquare = this.changeSquare.bind(this);
+    this.changeCircle = this.changeCircle.bind(this);
+    this.changeTriangle = this.changeTriangle.bind(this);
+  }
+
+  changeCircle(e) {
+    this.setState((prevState, props) => ({
+      shape: 'circle'
+    }));
+  }
+
+  changeTriangle(e) {
+    this.setState((prevState, props) => ({
+      shape: 'triangle'
+    }));
+  }
+
+  changeSquare(e) {
+    this.setState((prevState, props) => ({
+      shape: 'square'
+    }));
+  }
+
+  render() {
+    const containerStyle = {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    };
+
+    return (
+      <div style={containerStyle}>
+        <ShapeObject w={400} h={400} shape={this.state.shape} color="gold" />
+        <Control
+          changeCircle={this.changeCircle}
+          changeSquare={this.changeSquare}
+          changeTriangle={this.changeTriangle}
+        />
+      </div>
+    );
+  }
 }
+
+export default Shape;

@@ -1,16 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Shape from './components/Shape';
 
-import ShapeContainer from './components/ShapeContainer';
-
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <ShapeContainer />
-        <ShapeContainer />
-      </div>
-    );
-  }
-}
-
-export default App;
+export default () => (
+  <div>
+    <Shape />
+    <Shape />
+  </div>
+);

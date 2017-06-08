@@ -1,5 +1,5 @@
 import React from 'react';
-import Shape from './Shape';
+import ShapeObject from './ShapeObject';
 
 export default ({ shape, color, onClick }) => {
   const style = {
@@ -8,7 +8,7 @@ export default ({ shape, color, onClick }) => {
 
   return (
     <a style={style} onClick={onClick}>
-      <Shape shape={shape} h={25} w={25} color={color} />
+      <ShapeObject shape={shape} h={25} w={25} color={color} />
     </a>
   );
 };
