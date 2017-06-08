@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ShapeObject = ({ color, w, h }) => {
+const Trapezoid = ({ color, w, h }) => {
 
   const size = (w + h) / 2;
   const sideSize = size / 2;
@@ -20,4 +20,4 @@ const ShapeObject = ({ color, w, h }) => {
   );
 };
 
-export default ShapeObject;
+export default Trapezoid;

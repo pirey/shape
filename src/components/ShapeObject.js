@@ -3,6 +3,7 @@ import Square from './shapes/Square';
 import Circle from './shapes/Circle';
 import Triangle from './shapes/Triangle';
 import Trapezoid from './shapes/Trapezoid';
+import Parallelogram from './shapes/Parallelogram';
 
 const ShapeObject = ({ shape, color, w, h }) => {
 
@@ -11,6 +12,7 @@ const ShapeObject = ({ shape, color, w, h }) => {
     circle: Circle,
     triangle: Triangle,
     trapezoid: Trapezoid,
+    parallelogram: Parallelogram,
   };
 
   const Shape = shapes[shape];

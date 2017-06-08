@@ -14,6 +14,7 @@ export default ({ activeShape, color, changeShape, changeColor }) => {
         <ControlShape onClick={() => changeShape('circle')} shape="circle" color={activeShape === 'circle' ? color : grey} />
         <ControlShape onClick={() => changeShape('triangle')} shape="triangle" color={activeShape === 'triangle' ? color : grey} />
         <ControlShape onClick={() => changeShape('trapezoid')} shape="trapezoid" color={activeShape === 'trapezoid' ? color : grey} />
+        <ControlShape onClick={() => changeShape('parallelogram')} shape="parallelogram" color={activeShape === 'parallelogram' ? color : grey} />
       </Flex>
       <Flex>
         <ControlColor color={color} onChange={changeColor} />
