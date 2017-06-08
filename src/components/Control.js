@@ -6,7 +6,6 @@ export default ({ changeSquare, changeCircle, changeTriangle }) => {
     display: 'flex',
     alignItems: 'center',
     justiryContent: 'center',
-    flexDirection: 'column',
   };
 
   return (
