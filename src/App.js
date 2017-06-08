@@ -1,13 +1,10 @@
 import React from 'react';
-import Shape from './components/Shape';
-import Flex from './components/Flex';
+import Main from './components/Main';
+
+import './App.css';
 
 export default () => (
   <div>
-    <Flex>
-      <Shape />
-      <Shape shape="circle" />
-      <Shape shape="triangle" />
-    </Flex>
+    <Main />
   </div>
 );

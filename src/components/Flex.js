@@ -1,15 +1,21 @@
 import React from 'react';
 
-export default ({ children, direction = 'row' }) => {
-  const style = {
+export default ({ style = {}, children }) => {
+
+  const originalStyle = {
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection: direction,
+    flexDirection: 'row',
+  };
+
+  const flexStyle = {
+    ...originalStyle,
+    ...style
   };
 
   return (
-    <div style={style}>{children}</div>
+    <div style={flexStyle}>{children}</div>
   );
 };
