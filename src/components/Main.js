@@ -12,8 +12,6 @@ export default () => {
   return (
     <Flex style={style}>
       <Shape />
-      <Shape shape="circle" />
-      <Shape shape="triangle" />
     </Flex>
   );
 };
